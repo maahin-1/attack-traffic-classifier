@@ -1,0 +1,23 @@
+cff-version: 1.2.0
+message: "If you use this software in your research, please cite it as below."
+title: "Attack Traffic Classifier"
+abstract: "Offline, reproducible Python research pipeline that audits original and corrected CICIDS2017 network-flow datasets, trains chronological-split random-forest intrusion-detection baselines with validation-frozen thresholds, and reports results together with their limitations."
+type: software
+version: 0.2.0
+date-released: 2026-11-06
+license: MIT
+authors:
+  - family-names: Osahan
+    given-names: Maahin Bir Singh
+repository-code: "https://github.com/maahin-1/attack-traffic-classifier"
+keywords:
+  - intrusion detection
+  - network intrusion detection
+  - CICIDS2017
+  - machine learning
+  - random forest
+  - scikit-learn
+  - cybersecurity
+  - reproducible research
+  - data leakage
+  - dataset quality
