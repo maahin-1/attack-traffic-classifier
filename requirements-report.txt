@@ -1,0 +1,4 @@
+# Optional export dependencies; already present during local verification.
+-r requirements-training.txt
+matplotlib==3.11.0
+pyarrow==25.0.1

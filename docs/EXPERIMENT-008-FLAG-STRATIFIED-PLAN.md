@@ -1,0 +1,9 @@
+# Experiment 008: exploratory flag-stratified packet check
+
+This plan was written after inspecting the earlier 20-flow and 40-flow examples and an inventory of CSV flag patterns. It is exploratory and uses a previously consumed assessment source; it is not a blind validation or a basis for correcting columns globally.
+
+In `03-11/UDPLag.csv`, consider rows with TCP protocol, dataset-clock time 11:15–11:30, two forward and zero backward packets, and integer flow duration 1–1,000 microseconds. For each observed combination of eight CSV flag fields, select the first 20 rows with distinct 27-feature digests and distinct bidirectional endpoint tuples, or all available when fewer exist. Selection uses CSV flag patterns to obtain diversity, not class labels; the sample is convenience-based and explicitly post-hoc.
+
+Search the supplied `_0137` PCAP once for each selected tuple in either direction. Use the previously observed +3-hour hypothesis to locate the CSV's duration window. Retain an example for first-packet comparison only if exactly two forward packets occur at the expected window endpoints; record every exclusion and the number of tuple-matching packets outside the window. This is a candidate packet association, not proof of the historical flow generator's segmentation or timezone.
+
+For all eight CSV fields (`FIN`, `SYN`, `RST`, `PSH`, `ACK`, `URG`, `CWE`, `ECE`), tabulate binary presence against each of the eight TCP flag bits on the first matched packet, with support and agreement counts. Columns or flag bits that do not vary cannot identify a mapping. Do not apply a correction or select a model based on this table. Fingerprint the input archive, packet file, code, helper implementations, and selected records before reading the packet payloads; verify them again afterward.

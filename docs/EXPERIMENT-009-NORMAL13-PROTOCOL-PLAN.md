@@ -1,0 +1,5 @@
+# Experiment 009: normal13 protocol coverage diagnostic
+
+The initial `normal_13.pcap` development inventory found 1,647,564 of 1,918,446 packet blocks outside its IPv4 TCP/UDP decoder. For this post-hoc diagnostic, reread the same consumed development capture and classify packet headers by link-layer and network-layer protocol, IPv4 transport number and fragmentation, and the existing decoder's success/failure. Report aggregate counts only; never export addresses, ports, payloads or per-packet records. Compare the total and decodable TCP/UDP counts against the original inventory. Detect malformed/truncated headers without treating them as network attacks.
+
+Verify source SHA-256 and implementation hashes before and after, and record source format limitations. Source name, protocol composition and non-overlapping time ranges do not establish every packet is benign, session independence, capture completeness, or holdout suitability. No model training, scoring, calibration, threshold change or new assessment capture selection is included.

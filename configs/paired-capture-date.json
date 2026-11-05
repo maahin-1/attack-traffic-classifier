@@ -1,0 +1,838 @@
+{
+  "boundaries": {
+    "test_start": "2017-07-06",
+    "validation_start": "2017-07-05"
+  },
+  "datasets": [
+    {
+      "columns": {
+        "active_max": "active_max",
+        "active_mean": "active_mean",
+        "active_min": "active_min",
+        "active_std": "active_std",
+        "bwd_iat_total": "bwd_iat_total",
+        "bwd_packet_length_max": "bwd_packet_length_max",
+        "bwd_packet_length_mean": "bwd_packet_length_mean",
+        "bwd_packet_length_min": "bwd_packet_length_min",
+        "bwd_packet_length_std": "bwd_packet_length_std",
+        "capture_date": "capture_date",
+        "event_end": "event_end",
+        "event_start": "event_start",
+        "flow_duration": "flow_duration",
+        "flow_iat_max": "flow_iat_max",
+        "flow_iat_mean": "flow_iat_mean",
+        "flow_iat_min": "flow_iat_min",
+        "flow_iat_std": "flow_iat_std",
+        "fwd_iat_total": "fwd_iat_total",
+        "fwd_packet_length_max": "fwd_packet_length_max",
+        "fwd_packet_length_mean": "fwd_packet_length_mean",
+        "fwd_packet_length_min": "fwd_packet_length_min",
+        "fwd_packet_length_std": "fwd_packet_length_std",
+        "idle_max": "idle_max",
+        "idle_mean": "idle_mean",
+        "idle_min": "idle_min",
+        "idle_std": "idle_std",
+        "local_end_upper": "local_end_upper",
+        "local_start_lower": "local_start_lower",
+        "local_start_upper": "local_start_upper",
+        "origin_member": "origin_member",
+        "origin_record": "origin_record",
+        "source_label": "source_label",
+        "source_timestamp": "source_timestamp",
+        "timing_status": "timing_status",
+        "total_bwd_bytes": "total_bwd_bytes",
+        "total_bwd_packets": "total_bwd_packets",
+        "total_fwd_bytes": "total_fwd_bytes",
+        "total_fwd_packets": "total_fwd_packets"
+      },
+      "files": [
+        "..\\data\\original\\subset-1pct-capture-date\\flows.csv"
+      ],
+      "label_map": {
+        "BENIGN": {
+          "binary": 0,
+          "family": "benign"
+        },
+        "Bot": {
+          "binary": 1,
+          "family": "Botnet"
+        },
+        "DDoS": {
+          "binary": 1,
+          "family": "DDoS"
+        },
+        "DoS GoldenEye": {
+          "binary": 1,
+          "family": "DoS GoldenEye"
+        },
+        "DoS Hulk": {
+          "binary": 1,
+          "family": "DoS Hulk"
+        },
+        "DoS Slowhttptest": {
+          "binary": 1,
+          "family": "DoS Slowhttptest"
+        },
+        "DoS slowloris": {
+          "binary": 1,
+          "family": "DoS Slowloris"
+        },
+        "FTP-Patator": {
+          "binary": 1,
+          "family": "FTP-Patator"
+        },
+        "Heartbleed": {
+          "binary": 1,
+          "family": "Heartbleed"
+        },
+        "Infiltration": {
+          "binary": 1,
+          "family": "Infiltration"
+        },
+        "PortScan": {
+          "binary": 1,
+          "family": "Portscan"
+        },
+        "SSH-Patator": {
+          "binary": 1,
+          "family": "SSH-Patator"
+        },
+        "Web Attack \u2013 Brute Force": {
+          "binary": 1,
+          "family": "Web Attack - Brute Force"
+        },
+        "Web Attack \u2013 Sql Injection": {
+          "binary": 1,
+          "family": "Web Attack - SQL Injection"
+        },
+        "Web Attack \u2013 XSS": {
+          "binary": 1,
+          "family": "Web Attack - XSS"
+        }
+      },
+      "label_map_version": "original-to-cns2022-families-v1",
+      "license": "UNB research-use/citation statement; keep local, no redistribution claim",
+      "preparation": {
+        "algorithm": "BLAKE2b-64(subset-v1:archive_sha256:member:csv_record_number) modulo denominator == 0",
+        "archive_bytes": 283876488,
+        "archive_sha256": "7bdbef286f8893f31c6db12105fa097fa5c2dcc6733179037a08129d150ea27a",
+        "by_member": {
+          "TrafficLabelling /Friday-WorkingHours-Afternoon-DDos.pcap_ISCX.csv": {
+            "selected_empty_rows": 0,
+            "selected_flow_rows": 2243,
+            "source_empty_excluded_rows": 0,
+            "source_flow_rows": 225745,
+            "source_input_rows": 225745,
+            "unsampled_empty_rows": 0,
+            "unsampled_flow_rows": 223502
+          },
+          "TrafficLabelling /Friday-WorkingHours-Afternoon-PortScan.pcap_ISCX.csv": {
+            "selected_empty_rows": 0,
+            "selected_flow_rows": 2826,
+            "source_empty_excluded_rows": 0,
+            "source_flow_rows": 286467,
+            "source_input_rows": 286467,
+            "unsampled_empty_rows": 0,
+            "unsampled_flow_rows": 283641
+          },
+          "TrafficLabelling /Friday-WorkingHours-Morning.pcap_ISCX.csv": {
+            "selected_empty_rows": 0,
+            "selected_flow_rows": 1830,
+            "source_empty_excluded_rows": 0,
+            "source_flow_rows": 191033,
+            "source_input_rows": 191033,
+            "unsampled_empty_rows": 0,
+            "unsampled_flow_rows": 189203
+          },
+          "TrafficLabelling /Monday-WorkingHours.pcap_ISCX.csv": {
+            "selected_empty_rows": 0,
+            "selected_flow_rows": 5228,
+            "source_empty_excluded_rows": 0,
+            "source_flow_rows": 529918,
+            "source_input_rows": 529918,
+            "unsampled_empty_rows": 0,
+            "unsampled_flow_rows": 524690
+          },
+          "TrafficLabelling /Thursday-WorkingHours-Afternoon-Infilteration.pcap_ISCX.csv": {
+            "selected_empty_rows": 0,
+            "selected_flow_rows": 2868,
+            "source_empty_excluded_rows": 0,
+            "source_flow_rows": 288602,
+            "source_input_rows": 288602,
+            "unsampled_empty_rows": 0,
+            "unsampled_flow_rows": 285734
+          },
+          "TrafficLabelling /Thursday-WorkingHours-Morning-WebAttacks.pcap_ISCX.csv": {
+            "selected_empty_rows": 2838,
+            "selected_flow_rows": 1681,
+            "source_empty_excluded_rows": 288602,
+            "source_flow_rows": 170366,
+            "source_input_rows": 458968,
+            "unsampled_empty_rows": 285764,
+            "unsampled_flow_rows": 168685
+          },
+          "TrafficLabelling /Tuesday-WorkingHours.pcap_ISCX.csv": {
+            "selected_empty_rows": 0,
+            "selected_flow_rows": 4510,
+            "source_empty_excluded_rows": 0,
+            "source_flow_rows": 445909,
+            "source_input_rows": 445909,
+            "unsampled_empty_rows": 0,
+            "unsampled_flow_rows": 441399
+          },
+          "TrafficLabelling /Wednesday-workingHours.pcap_ISCX.csv": {
+            "selected_empty_rows": 0,
+            "selected_flow_rows": 7048,
+            "source_empty_excluded_rows": 0,
+            "source_flow_rows": 692703,
+            "source_input_rows": 692703,
+            "unsampled_empty_rows": 0,
+            "unsampled_flow_rows": 685655
+          }
+        },
+        "clock_policy": "DMY calendar date validated against member capture day; original timezone unresolved, so UTC event start/end are blank. Missing AM/PM uses both12hour candidates and the entire represented second/minute bin; naive local upper bound is inclusive. No labels are used for time inference",
+        "deduplication_note": "Prepared source-order ties within a capture day may select different conflicting-label representatives than event-time order; apply the same capture-date/source-order policy to both variants",
+        "denominator": 100,
+        "encoding": "cp1252",
+        "end_time": "local_end_upper=latest candidate precision-bin endpoint+ceil(nonnegative finite Flow Duration microseconds); invalid numeric values remain in flows for downstream exclusion",
+        "exclusions_sha256": "1c9a944de8fcfb9cb28617751637bc180576216d6ba3a790034b1b138568852b",
+        "feature_aliases": {
+          "Active Max": {
+            "canonical": "active_max",
+            "original_header": "Active Max",
+            "unit": "microseconds"
+          },
+          "Active Mean": {
+            "canonical": "active_mean",
+            "original_header": "Active Mean",
+            "unit": "microseconds"
+          },
+          "Active Min": {
+            "canonical": "active_min",
+            "original_header": "Active Min",
+            "unit": "microseconds"
+          },
+          "Active Std": {
+            "canonical": "active_std",
+            "original_header": "Active Std",
+            "unit": "microseconds"
+          },
+          "Bwd IAT Total": {
+            "canonical": "bwd_iat_total",
+            "original_header": "Bwd IAT Total",
+            "unit": "microseconds"
+          },
+          "Bwd Packet Length Max": {
+            "canonical": "bwd_packet_length_max",
+            "original_header": "Bwd Packet Length Max",
+            "unit": "bytes"
+          },
+          "Bwd Packet Length Mean": {
+            "canonical": "bwd_packet_length_mean",
+            "original_header": "Bwd Packet Length Mean",
+            "unit": "bytes"
+          },
+          "Bwd Packet Length Min": {
+            "canonical": "bwd_packet_length_min",
+            "original_header": "Bwd Packet Length Min",
+            "unit": "bytes"
+          },
+          "Bwd Packet Length Std": {
+            "canonical": "bwd_packet_length_std",
+            "original_header": "Bwd Packet Length Std",
+            "unit": "bytes"
+          },
+          "Flow Duration": {
+            "canonical": "flow_duration",
+            "original_header": "Flow Duration",
+            "unit": "microseconds"
+          },
+          "Flow IAT Max": {
+            "canonical": "flow_iat_max",
+            "original_header": "Flow IAT Max",
+            "unit": "microseconds"
+          },
+          "Flow IAT Mean": {
+            "canonical": "flow_iat_mean",
+            "original_header": "Flow IAT Mean",
+            "unit": "microseconds"
+          },
+          "Flow IAT Min": {
+            "canonical": "flow_iat_min",
+            "original_header": "Flow IAT Min",
+            "unit": "microseconds"
+          },
+          "Flow IAT Std": {
+            "canonical": "flow_iat_std",
+            "original_header": "Flow IAT Std",
+            "unit": "microseconds"
+          },
+          "Fwd IAT Total": {
+            "canonical": "fwd_iat_total",
+            "original_header": "Fwd IAT Total",
+            "unit": "microseconds"
+          },
+          "Fwd Packet Length Max": {
+            "canonical": "fwd_packet_length_max",
+            "original_header": "Fwd Packet Length Max",
+            "unit": "bytes"
+          },
+          "Fwd Packet Length Mean": {
+            "canonical": "fwd_packet_length_mean",
+            "original_header": "Fwd Packet Length Mean",
+            "unit": "bytes"
+          },
+          "Fwd Packet Length Min": {
+            "canonical": "fwd_packet_length_min",
+            "original_header": "Fwd Packet Length Min",
+            "unit": "bytes"
+          },
+          "Fwd Packet Length Std": {
+            "canonical": "fwd_packet_length_std",
+            "original_header": "Fwd Packet Length Std",
+            "unit": "bytes"
+          },
+          "Idle Max": {
+            "canonical": "idle_max",
+            "original_header": "Idle Max",
+            "unit": "microseconds"
+          },
+          "Idle Mean": {
+            "canonical": "idle_mean",
+            "original_header": "Idle Mean",
+            "unit": "microseconds"
+          },
+          "Idle Min": {
+            "canonical": "idle_min",
+            "original_header": "Idle Min",
+            "unit": "microseconds"
+          },
+          "Idle Std": {
+            "canonical": "idle_std",
+            "original_header": "Idle Std",
+            "unit": "microseconds"
+          },
+          "Total Bwd packets": {
+            "canonical": "total_bwd_packets",
+            "original_header": "Total Backward Packets",
+            "unit": "count"
+          },
+          "Total Fwd Packet": {
+            "canonical": "total_fwd_packets",
+            "original_header": "Total Fwd Packets",
+            "unit": "count"
+          },
+          "Total Length of Bwd Packet": {
+            "canonical": "total_bwd_bytes",
+            "original_header": "Total Length of Bwd Packets",
+            "unit": "bytes"
+          },
+          "Total Length of Fwd Packet": {
+            "canonical": "total_fwd_bytes",
+            "original_header": "Total Length of Fwd Packets",
+            "unit": "bytes"
+          }
+        },
+        "feature_policy": "Same27numeric statistics as corrected release via explicit aliases; both duplicate Fwd Header Length columns omitted",
+        "flows_sha256": "dd684a3d591de8afe9c53cdab54baebeb766d55135d13c75d990a557b76822ba",
+        "label_map_version": "original-to-cns2022-families-v1",
+        "label_policy": "BENIGN is binary0;15enumerated original raw labels explicitly mapped to binary/families, with Bot/PortScan/slowloris/WebAttack spelling aliases; no missing-label binary assignment",
+        "max_rows": 50000,
+        "schema_version": 1,
+        "selected_empty_rows": 2838,
+        "selected_flow_rows": 28234,
+        "selected_rows": 28234,
+        "selected_source_label_counts": {
+          "<missing>": 2838,
+          "BENIGN": 22703,
+          "Bot": 29,
+          "DDoS": 1273,
+          "DoS GoldenEye": 104,
+          "DoS Hulk": 2328,
+          "DoS Slowhttptest": 44,
+          "DoS slowloris": 53,
+          "FTP-Patator": 72,
+          "PortScan": 1545,
+          "SSH-Patator": 62,
+          "Web Attack \u2013 Brute Force": 14,
+          "Web Attack \u2013 Sql Injection": 1,
+          "Web Attack \u2013 XSS": 6
+        },
+        "selection_note": "Hash selection is label-independent and evaluated before emptiness/label inspection on original source ordinals; no class balancing or held-out oversampling",
+        "sorting": "capture_date, origin_member lexicographic, original numeric origin_record; no earliest-within-day claim",
+        "source_empty_excluded_rows": 288602,
+        "source_exclusion_policy": "Every all85fields-empty record is source padding, not a labelled flow; all original ordinals and selected flags are recorded in preparation_exclusions.csv; missing labels on otherwise nonempty records fail validation",
+        "source_flow_rows": 2830743,
+        "source_input_rows": 3119345,
+        "source_label_counts": {
+          "<missing>": 288602,
+          "BENIGN": 2273097,
+          "Bot": 1966,
+          "DDoS": 128027,
+          "DoS GoldenEye": 10293,
+          "DoS Hulk": 231073,
+          "DoS Slowhttptest": 5499,
+          "DoS slowloris": 5796,
+          "FTP-Patator": 7938,
+          "Heartbleed": 11,
+          "Infiltration": 36,
+          "PortScan": 158930,
+          "SSH-Patator": 5897,
+          "Web Attack \u2013 Brute Force": 1507,
+          "Web Attack \u2013 Sql Injection": 21,
+          "Web Attack \u2013 XSS": 652
+        },
+        "source_label_values": [
+          "BENIGN",
+          "Bot",
+          "DDoS",
+          "DoS GoldenEye",
+          "DoS Hulk",
+          "DoS Slowhttptest",
+          "DoS slowloris",
+          "FTP-Patator",
+          "Heartbleed",
+          "Infiltration",
+          "PortScan",
+          "SSH-Patator",
+          "Web Attack \u2013 Brute Force",
+          "Web Attack \u2013 Sql Injection",
+          "Web Attack \u2013 XSS"
+        ],
+        "temporal_basis": "capture_date",
+        "unsampled_empty_rows": 285764,
+        "unsampled_flow_rows": 2802509
+      },
+      "release": "CICIDS2017-GeneratedLabelledFlows-7bdbef286f88-subset-1-in-100-capture-date",
+      "retrieved_at": "2026-11-01T20:53:00.788524+00:00",
+      "source_url": "https://cicresearch.ca/CICDataset/CIC-IDS-2017/download.php?file=CIC-IDS-2017%2FCSVs%2FGeneratedLabelledFlows.zip",
+      "timestamp_format": "%Y-%m-%d %H:%M:%S.%f",
+      "timezone": "unresolved",
+      "variant": "original"
+    },
+    {
+      "columns": {
+        "active_max": "active_max",
+        "active_mean": "active_mean",
+        "active_min": "active_min",
+        "active_std": "active_std",
+        "attempted_category": "attempted_category",
+        "bwd_iat_total": "bwd_iat_total",
+        "bwd_packet_length_max": "bwd_packet_length_max",
+        "bwd_packet_length_mean": "bwd_packet_length_mean",
+        "bwd_packet_length_min": "bwd_packet_length_min",
+        "bwd_packet_length_std": "bwd_packet_length_std",
+        "capture_date": "capture_date",
+        "event_end": "event_end",
+        "event_start": "event_start",
+        "flow_duration": "flow_duration",
+        "flow_iat_max": "flow_iat_max",
+        "flow_iat_mean": "flow_iat_mean",
+        "flow_iat_min": "flow_iat_min",
+        "flow_iat_std": "flow_iat_std",
+        "fwd_iat_total": "fwd_iat_total",
+        "fwd_packet_length_max": "fwd_packet_length_max",
+        "fwd_packet_length_mean": "fwd_packet_length_mean",
+        "fwd_packet_length_min": "fwd_packet_length_min",
+        "fwd_packet_length_std": "fwd_packet_length_std",
+        "idle_max": "idle_max",
+        "idle_mean": "idle_mean",
+        "idle_min": "idle_min",
+        "idle_std": "idle_std",
+        "local_end_upper": "local_end_upper",
+        "local_start_lower": "local_start_lower",
+        "local_start_upper": "local_start_upper",
+        "origin_member": "origin_member",
+        "origin_record": "origin_record",
+        "source_label": "source_label",
+        "source_timestamp": "source_timestamp",
+        "timing_status": "timing_status",
+        "total_bwd_bytes": "total_bwd_bytes",
+        "total_bwd_packets": "total_bwd_packets",
+        "total_fwd_bytes": "total_fwd_bytes",
+        "total_fwd_packets": "total_fwd_packets"
+      },
+      "files": [
+        "..\\data\\cns2022\\subset-1pct-capture-date\\flows.csv"
+      ],
+      "label_map": {
+        "BENIGN": {
+          "binary": 0,
+          "family": "benign"
+        },
+        "Botnet": {
+          "binary": 1,
+          "family": "Botnet"
+        },
+        "Botnet - Attempted": {
+          "binary": 0,
+          "family": "benign"
+        },
+        "DDoS": {
+          "binary": 1,
+          "family": "DDoS"
+        },
+        "DoS GoldenEye": {
+          "binary": 1,
+          "family": "DoS GoldenEye"
+        },
+        "DoS GoldenEye - Attempted": {
+          "binary": 0,
+          "family": "benign"
+        },
+        "DoS Hulk": {
+          "binary": 1,
+          "family": "DoS Hulk"
+        },
+        "DoS Hulk - Attempted": {
+          "binary": 0,
+          "family": "benign"
+        },
+        "DoS Slowhttptest": {
+          "binary": 1,
+          "family": "DoS Slowhttptest"
+        },
+        "DoS Slowhttptest - Attempted": {
+          "binary": 0,
+          "family": "benign"
+        },
+        "DoS Slowloris": {
+          "binary": 1,
+          "family": "DoS Slowloris"
+        },
+        "DoS Slowloris - Attempted": {
+          "binary": 0,
+          "family": "benign"
+        },
+        "FTP-Patator": {
+          "binary": 1,
+          "family": "FTP-Patator"
+        },
+        "FTP-Patator - Attempted": {
+          "binary": 0,
+          "family": "benign"
+        },
+        "Heartbleed": {
+          "binary": 1,
+          "family": "Heartbleed"
+        },
+        "Infiltration": {
+          "binary": 1,
+          "family": "Infiltration"
+        },
+        "Infiltration - Attempted": {
+          "binary": 0,
+          "family": "benign"
+        },
+        "Infiltration - Portscan": {
+          "binary": 1,
+          "family": "Infiltration - Portscan"
+        },
+        "Portscan": {
+          "binary": 1,
+          "family": "Portscan"
+        },
+        "SSH-Patator": {
+          "binary": 1,
+          "family": "SSH-Patator"
+        },
+        "SSH-Patator - Attempted": {
+          "binary": 0,
+          "family": "benign"
+        },
+        "Web Attack - Brute Force": {
+          "binary": 1,
+          "family": "Web Attack - Brute Force"
+        },
+        "Web Attack - Brute Force - Attempted": {
+          "binary": 0,
+          "family": "benign"
+        },
+        "Web Attack - SQL Injection": {
+          "binary": 1,
+          "family": "Web Attack - SQL Injection"
+        },
+        "Web Attack - SQL Injection - Attempted": {
+          "binary": 0,
+          "family": "benign"
+        },
+        "Web Attack - XSS": {
+          "binary": 1,
+          "family": "Web Attack - XSS"
+        },
+        "Web Attack - XSS - Attempted": {
+          "binary": 0,
+          "family": "benign"
+        }
+      },
+      "label_map_version": "cns2022-observed-attempted-benign-v1",
+      "license": "Usage/redistribution terms not yet verified; retain locally for research inspection",
+      "preparation": {
+        "algorithm": "BLAKE2b-64(subset-v1:archive_sha256:member:csv_record_number) modulo denominator == 0",
+        "archive_bytes": 343549013,
+        "archive_sha256": "97fdb91d339e2d8cf5627f981b831e5e7e400b981c58181c451a38fd03c48883",
+        "by_member": {
+          "friday.csv": {
+            "selected_rows": 5412,
+            "source_rows": 547557
+          },
+          "monday.csv": {
+            "selected_rows": 3679,
+            "source_rows": 371624
+          },
+          "thursday.csv": {
+            "selected_rows": 3582,
+            "source_rows": 362076
+          },
+          "tuesday.csv": {
+            "selected_rows": 3259,
+            "source_rows": 322078
+          },
+          "wednesday.csv": {
+            "selected_rows": 4977,
+            "source_rows": 496641
+          }
+        },
+        "denominator": 100,
+        "end_time": "UTC start + Flow Duration in microseconds; malformed/negative values retained for audit",
+        "feature_policy": "27 corrected-release numeric statistics; original feature equivalence not yet verified",
+        "label_policy": "BENIGN and exact observed labels ending ' - Attempted' -> benign; remaining enumerated labels -> named attacks",
+        "max_rows": 50000,
+        "schema_version": 1,
+        "selected_rows": 20909,
+        "selection_note": "Label-independent deterministic subset; no balancing of validation/test; no full-data claim.",
+        "sorting": "capture date, source member name, source CSV record number; not within-day earliest event",
+        "source_label_values": [
+          "BENIGN",
+          "Botnet",
+          "Botnet - Attempted",
+          "DDoS",
+          "DoS GoldenEye",
+          "DoS GoldenEye - Attempted",
+          "DoS Hulk",
+          "DoS Hulk - Attempted",
+          "DoS Slowhttptest",
+          "DoS Slowhttptest - Attempted",
+          "DoS Slowloris",
+          "DoS Slowloris - Attempted",
+          "FTP-Patator",
+          "FTP-Patator - Attempted",
+          "Heartbleed",
+          "Infiltration",
+          "Infiltration - Attempted",
+          "Infiltration - Portscan",
+          "Portscan",
+          "SSH-Patator",
+          "SSH-Patator - Attempted",
+          "Web Attack - Brute Force",
+          "Web Attack - Brute Force - Attempted",
+          "Web Attack - SQL Injection",
+          "Web Attack - SQL Injection - Attempted",
+          "Web Attack - XSS",
+          "Web Attack - XSS - Attempted"
+        ],
+        "temporal_basis": "capture_date"
+      },
+      "release": "CNS2022-CICIDS2017-97fdb91d339e-subset-1-in-100",
+      "retrieved_at": "2026-11-01T20:28:29.389629+00:00",
+      "source_url": "https://intrusion-detection.distrinet-research.be/CNS2022/Datasets/CICIDS2017_improved.zip",
+      "timestamp_format": "%Y-%m-%d %H:%M:%S.%f",
+      "timezone": "UTC",
+      "variant": "corrected"
+    }
+  ],
+  "experiment_notes": [
+    "Exploratory comparison of independently sampled original and CNS2022 populations; not matched flow pairs or label-only causal effects.",
+    "The corrected test scores were inspected in Experiment 001. This comparison reuses that capture; it is not an untouched prospective holdout. No settings are retuned from these test scores.",
+    "Both releases use the same 27 numeric feature definitions/units and capture-day blocks, with one fixed forest configuration and separately validation-selected frozen thresholds.",
+    "Original missing AM/PM and timezone are preserved as local uncertainty bounds; capture_date matching does not establish identical UTC-instant boundaries or within-day earliest duplicate order.",
+    "Every source empty record is listed in the original preparation exclusion ledger; source padding is separate from sampled flow-quality exclusions.",
+    "Later feature duplicates are quarantined by earliest eligible capture day then source order. Conflicting raw/binary-label duplicate row counts are disclosed in the audit.",
+    "Test spans only two capture days; no reliable temporal-block comparison interval is claimed. Flow-level Wilson intervals assume independence."
+  ],
+  "feature_allowlist": [
+    "flow_duration",
+    "total_fwd_packets",
+    "total_bwd_packets",
+    "total_fwd_bytes",
+    "total_bwd_bytes",
+    "fwd_packet_length_max",
+    "fwd_packet_length_min",
+    "fwd_packet_length_mean",
+    "fwd_packet_length_std",
+    "bwd_packet_length_max",
+    "bwd_packet_length_min",
+    "bwd_packet_length_mean",
+    "bwd_packet_length_std",
+    "flow_iat_mean",
+    "flow_iat_std",
+    "flow_iat_max",
+    "flow_iat_min",
+    "fwd_iat_total",
+    "bwd_iat_total",
+    "active_mean",
+    "active_std",
+    "active_max",
+    "active_min",
+    "idle_mean",
+    "idle_std",
+    "idle_max",
+    "idle_min"
+  ],
+  "feature_units": {
+    "active_max": "microseconds",
+    "active_mean": "microseconds",
+    "active_min": "microseconds",
+    "active_std": "microseconds",
+    "bwd_iat_total": "microseconds",
+    "bwd_packet_length_max": "bytes",
+    "bwd_packet_length_mean": "bytes",
+    "bwd_packet_length_min": "bytes",
+    "bwd_packet_length_std": "bytes",
+    "flow_duration": "microseconds",
+    "flow_iat_max": "microseconds",
+    "flow_iat_mean": "microseconds",
+    "flow_iat_min": "microseconds",
+    "flow_iat_std": "microseconds",
+    "fwd_iat_total": "microseconds",
+    "fwd_packet_length_max": "bytes",
+    "fwd_packet_length_mean": "bytes",
+    "fwd_packet_length_min": "bytes",
+    "fwd_packet_length_std": "bytes",
+    "idle_max": "microseconds",
+    "idle_mean": "microseconds",
+    "idle_min": "microseconds",
+    "idle_std": "microseconds",
+    "total_bwd_bytes": "bytes",
+    "total_bwd_packets": "count",
+    "total_fwd_bytes": "bytes",
+    "total_fwd_packets": "count"
+  },
+  "label_map": {
+    "BENIGN": {
+      "binary": 0,
+      "family": "benign"
+    },
+    "Botnet": {
+      "binary": 1,
+      "family": "Botnet"
+    },
+    "Botnet - Attempted": {
+      "binary": 0,
+      "family": "benign"
+    },
+    "DDoS": {
+      "binary": 1,
+      "family": "DDoS"
+    },
+    "DoS GoldenEye": {
+      "binary": 1,
+      "family": "DoS GoldenEye"
+    },
+    "DoS GoldenEye - Attempted": {
+      "binary": 0,
+      "family": "benign"
+    },
+    "DoS Hulk": {
+      "binary": 1,
+      "family": "DoS Hulk"
+    },
+    "DoS Hulk - Attempted": {
+      "binary": 0,
+      "family": "benign"
+    },
+    "DoS Slowhttptest": {
+      "binary": 1,
+      "family": "DoS Slowhttptest"
+    },
+    "DoS Slowhttptest - Attempted": {
+      "binary": 0,
+      "family": "benign"
+    },
+    "DoS Slowloris": {
+      "binary": 1,
+      "family": "DoS Slowloris"
+    },
+    "DoS Slowloris - Attempted": {
+      "binary": 0,
+      "family": "benign"
+    },
+    "FTP-Patator": {
+      "binary": 1,
+      "family": "FTP-Patator"
+    },
+    "FTP-Patator - Attempted": {
+      "binary": 0,
+      "family": "benign"
+    },
+    "Heartbleed": {
+      "binary": 1,
+      "family": "Heartbleed"
+    },
+    "Infiltration": {
+      "binary": 1,
+      "family": "Infiltration"
+    },
+    "Infiltration - Attempted": {
+      "binary": 0,
+      "family": "benign"
+    },
+    "Infiltration - Portscan": {
+      "binary": 1,
+      "family": "Infiltration - Portscan"
+    },
+    "Portscan": {
+      "binary": 1,
+      "family": "Portscan"
+    },
+    "SSH-Patator": {
+      "binary": 1,
+      "family": "SSH-Patator"
+    },
+    "SSH-Patator - Attempted": {
+      "binary": 0,
+      "family": "benign"
+    },
+    "Web Attack - Brute Force": {
+      "binary": 1,
+      "family": "Web Attack - Brute Force"
+    },
+    "Web Attack - Brute Force - Attempted": {
+      "binary": 0,
+      "family": "benign"
+    },
+    "Web Attack - SQL Injection": {
+      "binary": 1,
+      "family": "Web Attack - SQL Injection"
+    },
+    "Web Attack - SQL Injection - Attempted": {
+      "binary": 0,
+      "family": "benign"
+    },
+    "Web Attack - XSS": {
+      "binary": 1,
+      "family": "Web Attack - XSS"
+    },
+    "Web Attack - XSS - Attempted": {
+      "binary": 0,
+      "family": "benign"
+    }
+  },
+  "label_map_version": "paired-release-specific-family-mappings-v1",
+  "output_dir": "..\\artifacts\\paired-capture-date",
+  "profile": "subset",
+  "temporal_basis": "capture_date",
+  "timestamp_format": "%Y-%m-%d %H:%M:%S.%f",
+  "timezone": "UTC",
+  "training": {
+    "alert_budget": 100,
+    "fpr_target": 0.01,
+    "max_depth": 12,
+    "max_rows_per_variant": 50000,
+    "min_samples_leaf": 2,
+    "n_estimators": 200,
+    "n_jobs": 1,
+    "seed": 42
+  },
+  "version": 1
+}

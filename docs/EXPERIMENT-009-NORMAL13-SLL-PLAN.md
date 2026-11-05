@@ -1,0 +1,7 @@
+# Experiment 009: Linux cooked `0x0003` development diagnostic
+
+The `normal_13.pcap` development inventory found 1,599,685 Linux cooked v1 frames with protocol field `0x0003`; the existing feature decoder excludes them. Subsequent post-hoc checks examined the first 5,000–10,000 such frames. The Linux source defines `0x0003` as `ETH_P_ALL`, not a specific network-layer protocol, and a libpcap issue describes a related cooked-capture ambiguity. Neither proves how these particular frames were recorded.
+
+Perform a full aggregate-only inventory of cooked header fields and count `0x0003` frames by packet type, hardware type, address length, captured/original lengths, and UTC-interpreted hour. Inspect every 160th such frame by file order for a bounded heuristic search for TCP/UDP IPv4 headers with a valid IPv4 header checksum within offsets 0–64 of the post-cooked payload. Also count whether an Ethernet-shaped first 14-byte payload has a common IPv4/IPv6/ARP EtherType. False positives, checksum offload, capture truncation and untested encapsulations mean this cannot classify all traffic. Do not export address bytes, payload, per-packet records or infer labels.
+
+Fully reread and hash the capture, verify packet and `0x0003` totals against the existing inventory, and check all source/implementation hashes. Use this only as development diagnostics; do not change the decoder, train or score a model, calibrate a threshold, assign benign labels, or select final assessment captures. Apply no speculative `0x0003` rewrite.

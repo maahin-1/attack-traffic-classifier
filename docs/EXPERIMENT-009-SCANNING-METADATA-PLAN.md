@@ -1,0 +1,3 @@
+# Experiment 009: scanning file start-time inventory
+
+After the scanning6 probe found no timestamp overlap with the provided CSV, inspect only the first timestamped packet header from each of the other five ZIP members to inventory approximate file start times and locate a candidate for a separate development check. Do not inspect labels, scores, payload contents or additional packet records in this step. A first timestamp does not prove a file's full time range, sorting, independence, or a CSV match. Partially read ZIP members cannot be CRC-verified in this step. Record this metadata exploration before choosing a further development candidate; no final holdout is selected. This is a separate post-hoc plan; it does not amend the original pre-scan probe plan.

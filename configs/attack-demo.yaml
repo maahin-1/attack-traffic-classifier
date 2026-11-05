@@ -1,0 +1,61 @@
+version: 1
+output_dir: ../artifacts/baseline-demo
+feature_allowlist:
+- flow_duration
+- packet_count
+feature_units:
+  flow_duration: microseconds
+  packet_count: count
+label_map_version: synthetic-v1
+label_map:
+  BENIGN:
+    binary: 0
+    family: benign
+  ATTACK:
+    binary: 1
+    family: synthetic_attack
+  UNSEEN:
+    binary: 1
+    family: synthetic_unseen
+timestamp_format: '%Y-%m-%d %H:%M:%S'
+timezone: UTC
+boundaries:
+  validation_start: '2026-01-02T00:00:00+00:00'
+  test_start: '2026-01-03T00:00:00+00:00'
+datasets:
+- variant: original
+  release: synthetic-original-v1
+  source_url: synthetic://original-fixture
+  retrieved_at: '2026-11-02T00:00:00Z'
+  license: Project-authored synthetic fixture; no real traffic or identifiers
+  files:
+  - ../examples/original.csv
+  columns:
+    Timestamp: event_start
+    End: event_end
+    Label: source_label
+    Duration: flow_duration
+    Packets: packet_count
+- variant: corrected
+  release: synthetic-corrected-v1
+  source_url: synthetic://corrected-fixture
+  retrieved_at: '2026-11-02T00:00:00Z'
+  license: Project-authored synthetic fixture; no real traffic or identifiers
+  files:
+  - ../examples/corrected.csv
+  columns:
+    Timestamp: event_start
+    End: event_end
+    Label: source_label
+    Duration: flow_duration
+    Packets: packet_count
+profile: synthetic
+training:
+  seed: 42
+  n_estimators: 200
+  max_depth: 12
+  min_samples_leaf: 1
+  n_jobs: 1
+  max_rows_per_variant: 100000
+  fpr_target: 0.01
+  alert_budget: 100

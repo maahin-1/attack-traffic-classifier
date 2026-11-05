@@ -1,0 +1,8 @@
+# Verified together on Python 3.13.14; install in a project-local virtual environment.
+numpy==2.5.1
+scipy==1.18.1
+scikit-learn==1.9.1
+joblib==1.6.0
+threadpoolctl==3.7.0
+PyYAML==6.0.3
+psutil==7.2.2

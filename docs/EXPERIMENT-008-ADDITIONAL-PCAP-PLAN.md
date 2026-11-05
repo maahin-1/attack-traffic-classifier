@@ -1,0 +1,5 @@
+# Experiment 008: additional packet-segment flag inventory
+
+The `_0137` segment contained no URG, ECE, or CWR flags among parseable IPv4 TCP packets, leaving those bits unavailable for first-packet comparisons. After seeing that result, inspect three members of the already supplied `PCAP-03-11.zip`: `_0` (first segment), `_0138` (neighbor of the inspected segment), and `_0145` (last segment by name). This convenience selection is not a random sample; no labels or model outcomes are used to select packets.
+
+Stream the three ZIP members without extracting complete copies. Check archive and implementation hashes before and after; read each member fully to invoke the ZIP CRC check and record its uncompressed SHA-256. Count TCP flag bits, combinations, and observed packet-clock ranges among parseable IPv4 TCP packets. Record omitted packets and decoder limits. A flag's presence makes a future tuple-to-CSV check possible; it does not establish a column mapping. A zero count in these three members does not establish absence from the other 143 members or a different capture.
